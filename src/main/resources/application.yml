@@ -15,7 +15,7 @@ quarkus:
     password: password
     jdbc: false
     reactive:
-      url: postgresql://localhost:5432/my_db
+      url: postgresql://localhost:5433/my_db
       max-size: 20
 mp:
   graphql:
