@@ -15,9 +15,13 @@ A CRUD app with Quarkus, Reactive Hibernate, Panache and GraphQL using a Postgre
 
 ### Setup & Launch
 
-#### Quarkus Backend Launch
-1. Navigate to the root directory (where pom.xml is)
-2. Run `mvn quarkus:dev` to start the Quarkus application
+#### Launch PostgreSQL Database
+```
+docker run -d --rm --name my_reative_db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=my_db -p 5432:5432 postgres:10.5
+```
+
+#### Launch Quarkus Application
+`./mvnw compile quarkus:dev`
 
 #### Acknowledgments
 - Based on the Medium article ['Creating a CRUD app with Quarkus, Reactive Hibernate, Panache and GraphQL using a PostgreSQL database'](https://medium.com/geekculture/creating-a-crud-app-with-quarkus-reactive-hibernate-panache-and-graphql-using-a-postgresql-216ecd75ee52)
